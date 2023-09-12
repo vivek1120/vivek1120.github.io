@@ -1,0 +1,746 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body h1 h2 h3 h4 h5 h6 p a div
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+
+    background-color: #b87a16;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: #b87a16;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #ffffff;
+    font-weight: bolder; 
+    transition: color 0.2s; 
+}
+
+.nav-link:hover{
+    color: #000000;
+}
+.nav-logo:hover{
+    color: #000000;
+    transition: color 0.2s;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #b87a16;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Base styles for all screen sizes */
+#home {
+    text-align: center;
+    padding: 100px;
+    background-color: #292929;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .profile-image img {
+    border-radius: 50%;
+    max-width: 200px;
+    border: 4px solid #fff;
+    margin: 0 auto;
+    display: block;
+  }
+  .profile-image img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  #home h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    
+  }
+  
+  #home a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b87a16;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #home a:hover {
+    background-color: #110e08;
+    transition: 0.3s;
+  }
+  
+  .profession {
+    font-variant: normal;
+    font-size: 15px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    
+  }
+  
+  .intro {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+  
+  .resume-button a{
+    font-size: 14px;
+  }
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 480px) {
+    /* Styles for screens up to 480px wide (e.g., mobile phones) */
+    #home {
+        padding: 50px 0;
+    }
+    #home h2 {
+      font-size: 30px;
+    }
+    .profile-image img {
+        max-width: 150px;
+    }
+  }
+  
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Styles for screens from 481px to 768px wide (e.g., tablets) */
+    #home h2 {
+      font-size: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for screens from 769px to 1024px wide (e.g., smaller laptops) */
+    #home {
+        padding: 80px 0;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Styles for screens from 1025px to 1200px wide (e.g., larger laptops) */
+    .intro {
+        font-size: 24px;
+    }
+  }
+  
+  @media screen and (min-width: 1201px) {
+    /* Styles for screens larger than 1200px (e.g., desktops) */
+    #home {
+        padding: 120px 0;
+    }
+  }
+
+  /* About Me section */
+#about {
+    text-align: center;
+    padding: 50px;
+    background-color: #b87a16;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  #about h3 {
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+  }
+  
+  #about p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+  }
+  
+  /* Style headings within paragraphs */
+  #about p h4 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Center-align the final paragraph */
+  #about p:last-child {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Style each box */
+  .box {
+    flex-basis: calc(50% - 20px);
+    background-color: #292929;
+    border: 2px solid #292929;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Style headings within boxes */
+  .box h4 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  /* Style paragraphs within boxes */
+  .box p {
+    font-size: 18px;
+    color: #292929;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .snalink {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  /* For screens up to 768px wide (e.g., smartphones) */
+  @media screen and (max-width: 768px) {
+    #about {
+      padding: 30px;
+    }
+  
+    #about h3 {
+      font-size: 24px;
+    }
+  
+    #about p {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+  }
+  
+  /* For screens between 769px and 1200px wide (e.g., tablets) */
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* Adjust styles for tablets */
+  }
+  
+  /* For screens wider than 1200px (e.g., desktops) */
+  @media screen and (min-width: 1201px) {
+    /* Adjust styles for desktops */
+  }
+
+  /* Style for the "Skills" section */
+#skills {
+    text-align: center;
+    padding: 70px; /* Add padding for spacing */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+  }
+  
+  #skills h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    letter-spacing: 9px;
+    font-weight: bolder;
+  }
+  #skills h3{
+  
+    font-size: 20px;
+    margin-top: 80px;
+  
+  }
+  
+  #skills p {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  
+  /* Style for the skills list containers */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Add space between skills */
+    margin-top: 20px; /* Add margin above skills list */
+  }
+  
+  /* Style for each individual skill item */
+  .skill {
+    width: 100px; /* Set a fixed width for skill items */
+    height: 100px; /* Set a fixed height for skill items */
+    border: 2px solid #333; /* Add a border */
+    border-radius: 50%; /* Make the images circular */
+    overflow: hidden; /* Hide overflowing content (e.g., larger images) */
+    transition: transform 0.3s linear; /* Add a hover effect */
+  }
+  
+  /* Style for the images inside each skill item */
+  .skill img {
+    width: 80%; /* Make the images fill the skill item */
+    height: 100%; /* Make the images fill the skill item */
+    object-fit: contain; /* Maintain aspect ratio and cover the container */
+    margin-left: 9px;
+  }
+  
+  /* Unique hover effect for the skill items */
+  .skill:hover {
+    transform: scale(1.1); /* Enlarge the skill item on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
+  
+  /* Media queries for responsiveness */
+  
+  /* For screens up to 768px wide (e.g., smartphones) */
+  @media screen and (max-width: 768px) {
+    #skills {
+      padding: 40px; /* Reduce padding for smaller screens */
+    }
+  
+    #skills h2 {
+      font-size: 24px; /* Decrease font size for smaller screens */
+    }
+  
+    #skills p {
+      font-size: 20px; /* Decrease font size for smaller screens */
+    }
+  
+    /* Adjust styles for skill items to fit smaller screens */
+    .skill {
+      width: 80px;
+      height: 80px;
+    }
+  
+    /* Adjust styles for skill item images */
+    .skill img {
+      margin-left: 5px;
+    }
+  }
+
+  /* Projects section */
+#projects{
+    padding: 100px;
+    background-color: #333;
+  }
+    .projects{
+      font-family: 'Montserrat', sans-serif;
+    }
+    .projects h2{
+      font-size: 33px;
+      letter-spacing: 9px;
+    }
+    .project-pic {
+      width: 65%;
+      height: 60%;
+      border-radius: 10px;
+    }
+    
+    .projects-container {
+      display: inline;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    
+    }
+  
+    
+    .project-container {
+      text-align: center;
+      width: 40rem;
+      padding: 1rem;
+    }
+    .project-container img:hover{
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .project-title{
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    
+    .project-container p {
+      padding: 0.4rem;
+    }
+    
+   
+    
+    .project-details {
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .project-container a{
+  
+      font-size: 20px;
+      text-decoration: none;
+      color: darkorange;
+  
+    }
+    .project-container a:hover{
+      color: #ffffff;
+  }
+  
+    /* Projects section ends */
+  
+  
+    @media only screen and (max-width: 700px){
+  
+    .projects-container {
+      flex-direction: column;
+      display: flex;
+    }
+  
+    .project-container {
+      width: 20.875rem;
+    }
+    .project-container {
+      text-align: center;
+      width: 35rem;
+      padding: 1rem;
+    }
+    .project-container img:hover{
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    }
+
+    /* Style for the education section */
+#education {
+    justify-content: space-between;
+    padding: 50px; 
+    background-color: #b87a16;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  #education h2 {
+    color: #000000;
+    font-size: 36px;
+    margin-top: 20px;
+    letter-spacing: 9px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  
+  
+  .education-item {
+    flex-basis: calc(100% - 20px);
+    background-color: #292929;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 40px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  
+  .education-item h3 {
+    font-size: 20px;
+    margin-top: 0;
+    color: #e0e0e0;
+  }
+  
+  .education-item p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #e0e0e0;
+  }
+  
+  /* For screens up to 768px wide (e.g., smartphones) */
+  @media screen and (max-width: 768px) {
+    #education {
+      padding: 30px; /* Further reduce padding for smaller screens */
+    }
+  
+    #education h2 {
+      font-size: 28px; /* Decrease font size for smaller screens */
+    }
+  
+    .education-item {
+      margin-top: 30px; /* Adjust margin for smaller screens */
+    }
+  
+    /* Adjust other styles as needed for smartphones */
+  }
+  
+/* Add a border and background to the contact section */
+#contact {
+    background-color: #333; /* Background color for the contact section */
+    padding: 100px; /* Add space around the content */
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Style for the h2 tag in the Contact section */
+  #contact h2 {
+    font-size: 36px; /* Adjust the font size as needed for a bigger heading */
+    text-align: center; /* Center-align the heading */
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff; /* Change the color as desired */
+    letter-spacing: 10px;
+  }
+  
+  /* Style for the contact information container */
+  .contact-info {
+    text-align: center; /* Center-align the content within the container */
+    font-size: 18px; /* Adjust the font size as needed for medium-sized text */
+    margin-top: 40px; /* Add some space between the heading and content */
+  }
+  
+  /* Style for individual contact information items */
+  .contact-info p {
+    margin: 10px 0; /* Add space around each item */
+    line-height: 2.0; /* Adjust line height for better readability */
+  }
+  
+  /* Style for links within contact information */
+  .contact-info a {
+    text-decoration: none; /* Remove underline from links */
+    color: #0073e6; /* Change link color as desired */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+  }
+  
+  /* Style for visited links within contact information */
+  .contact-info a:visited {
+    color: #551a8b; /* Change visited link color as desired */
+  }
+  
+  /* Hover effect for links */
+  .contact-info a:hover {
+    color: #ff5733; /* Change link color on hover */
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For screens up to 768px wide (e.g., smartphones) */
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smartphones */
+    #contact {
+      padding: 60px; /* Reduce padding for smaller screens */
+    }
+  
+    #contact h2 {
+      font-size: 28px; /* Decrease font size for smaller screens */
+      margin-bottom: 30px; /* Adjust margin for smaller screens */
+    }
+  
+    .contact-info {
+      font-size: 16px; /* Decrease font size for smaller screens */
+      margin-top: 30px; /* Adjust margin for smaller screens */
+    }
+  }
+  
+  /* For screens between 769px and 1200px wide (e.g., tablets) */
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* Adjust styles for tablets */
+  }
+  
+  /* For screens wider than 1200px (e.g., desktops) */
+  @media screen and (min-width: 1201px) {
+    /* Adjust styles for desktops */
+  }
+
+  /* Footer section styling */
+section {
+    background-color: #333;
+    color: white;
+    padding: 10px; /* Increase padding for better spacing on smaller screens */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Social links container */
+  .social-links {
+    margin: 15px 0;
+  }
+  
+  /* Social media links styling */
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #b87a16; /* Blue color for social icons */
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+  }
+  
+  /* Social media icon image styling */
+  .social-links img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ending{
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  /* Footer text link styling */
+  p a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Footer text link hover effect */
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Scroll-to-top button styling */
+  button#scrollToTopBtn {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    background-color: transparent; /* Set the background to transparent */
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px; /* Increase button size for better visibility */
+    cursor: pointer;
+  }
+  
+  button#scrollToTopBtn img {
+    width: 75%; /* Make sure the image takes up the full button */
+    height: 70%;
+  }
+  
+  button#scrollToTopBtn:hover {
+    background-color: transparent; /* Set the background to transparent on hover */
+  }
+  
+  
+  
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For screens up to 768px wide (e.g., smartphones) */
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smartphones */
+    .social-links a {
+      width: 30px; /* Decrease icon size for smaller screens */
+      height: 30px; /* Decrease icon size for smaller screens */
+    }
+  
+    button#scrollToTopBtn {
+      width: 40px; /* Decrease button size for smaller screens */
+      height: 40px; /* Decrease button size for smaller screens */
+    }
+  }
+  
+  /* For screens between 769px and 1200px wide (e.g., tablets) */
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    /* Adjust styles for tablets */
+  }
+  
+  /* For screens wider than 1200px (e.g., desktops) */
+  @media screen and (min-width: 1201px) {
+    /* Adjust styles for desktops */
+  }
+  
